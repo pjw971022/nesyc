@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="NeSyC: A Neuro-symbolic Continual Learner For Complex Embodied Tasks in Open Domains">
+  <meta name="keywords" content="NeSyC, Neuro-symbolic, Continual Learning, Embodied AI, LLM, Symbolic AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeSyC: Neuro-symbolic Continual Learning</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <style>
+    .publication-title {
+      font-size: 2.5rem !important;
+    }
+    .publication-authors {
+      margin-top: 1rem;
+    }
+    .publication-venue {
+      margin-top: 1rem;
+    }
+    .abstract-text {
+      text-align: justify;
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+    .highlight-text {
+      color: #4a4a4a;
+      font-weight: 600;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">NeSyC: A Neuro-symbolic Continual Learner For Complex Embodied Tasks in Open Domains</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Wonje Choi,
+            </span>
+            <span class="author-block">
+              <a href="https://pjw971022.github.io/">Jinwoo Park</a>,
+            </span>
+            <span class="author-block">
+              Sanghyun Ahn,
+            </span>
+            <span class="author-block">
+              Daehee Lee,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.co.kr/citations?user=Gaxjc7UAAAAJ&hl=en">Honguk Woo</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Sungkyunkwan University (SKKU)</span>
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=VoayJihXra"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- OpenReview Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=VoayJihXra"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>OpenReview</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p class="abstract-text">
+            We explore neuro-symbolic approaches to generalize actionable knowledge, enabling embodied agents to tackle complex tasks more effectively in open-domain environments. A key challenge for embodied agents is the generalization of knowledge across diverse environments and situations, as limited experiences often confine them to their prior knowledge.
+          </p>
+          <p class="abstract-text">
+            To address this issue, we introduce a novel framework, <span class="highlight-text">NeSyC</span>, a neuro-symbolic continual learner that emulates the hypothetico-deductive model by continuously formulating and validating knowledge from limited experiences through the combined use of Large Language Models (LLMs) and symbolic tools. Specifically, NeSyC incorporates a <span class="highlight-text">contrastive generality improvement scheme</span>. This scheme iteratively produces hypotheses using LLMs and conducts contrastive validation with symbolic tools, reinforcing the justification for admissible actions while minimizing the inference of inadmissible ones.
+          </p>
+          <p class="abstract-text">
+            We also introduce a <span class="highlight-text">memory-based monitoring scheme</span> that efficiently detects action errors and triggers the knowledge evolution process across domains. Experiments conducted on embodied control benchmarks—including ALFWorld, VirtualHome, Minecraft, RLBench, and a real-world robotic scenario—demonstrate that NeSyC is highly effective in solving complex embodied tasks across a range of open-domain settings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is borrowed from the <a href="https://nerfies.github.io">Nerfies</a> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
