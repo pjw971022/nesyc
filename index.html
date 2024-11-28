@@ -71,19 +71,18 @@
           </div>
           
           <div class="is-size-5 publication-authors">
-            <span class="author-block" style="font-size: 0.9em;">* Equal contribution</span>
-          </div>
-          <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Sungkyunkwan University (SKKU),</span>
             <span class="author-block"><sup>2</sup>Carnegie Mellon University (CMU)</span>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">ICLR 2025 (Under Review)</span>
+          <div class="is-size-8 publication-authors">
+            <span class="author-block" style="font-size: 0.9em;">* Equal contribution</span>
           </div>
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">Sungkyunkwan University (SKKU)</span>
-          </div> -->
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><strong>ICLR 2025 (Under Review)</strong></span>
+          </div>
+
           
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -148,7 +147,174 @@
     </div>
   </div>
 </section>
-
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        
+        <!-- Method figure -->
+        <div class="content has-text-centered">
+          <div class="method-figure">
+            <img src="static/images/method.png" alt="NeSyC Framework Overview"/>
+          </div>
+          <p class="caption">
+            Overview of our NeSyC framework. NeSyC combines LLMs and symbolic tools to enable continual knowledge evolution for embodied agents.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Results</h2>
+        <!-- 여기에 위의 table 코드 삽입 -->
+        <style>
+          .results-table {
+              width: 100%;
+              border-collapse: collapse;
+              margin: 20px 0;
+              font-size: 0.9em;
+              font-family: 'Google Sans', sans-serif;
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          }
+          
+          .results-table th,
+          .results-table td {
+              padding: 12px 15px;
+              text-align: center;
+              border: 1px solid #ddd;
+          }
+          
+          .results-table thead tr {
+              background-color: #009879;
+              color: white;
+              font-weight: bold;
+          }
+          
+          .results-table tbody tr {
+              border-bottom: 1px solid #ddd;
+          }
+          
+          .results-table tbody tr:nth-of-type(even) {
+              background-color: #f3f3f3;
+          }
+          
+          .results-table tbody tr:last-of-type {
+              border-bottom: 2px solid #009879;
+          }
+          
+          .green-check {
+              color: #22c55e;
+              font-size: 1.2em;
+          }
+          
+          .red-x {
+              color: #ef4444;
+              font-size: 1.2em;
+          }
+          
+          .highlight {
+              font-weight: bold;
+              color: #009879;
+          }
+          
+          .method-column {
+              text-align: left;
+              font-weight: 500;
+          }
+          
+          .category-header {
+              background-color: #f8f9fa;
+              font-weight: 600;
+          }
+          </style>
+          
+          <div class="table-container">
+              <table class="results-table">
+                  <thead>
+                      <tr>
+                          <th colspan="2">ALFWorld</th>
+                          <th colspan="3">Complete Experience Set</th>
+                          <th colspan="3">Noisy Experience Set</th>
+                          <th colspan="3">Imperfect Experience Set</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="category-header">
+                          <td>Logic Exp.</td>
+                          <td>Method</td>
+                          <td>SR</td>
+                          <td>GC</td>
+                          <td>Refine</td>
+                          <td>SR</td>
+                          <td>GC</td>
+                          <td>Refine</td>
+                          <td>SR</td>
+                          <td>GC</td>
+                          <td>Refine</td>
+                      </tr>
+                      <tr>
+                          <td class="method-column">NL</td>
+                          <td class="method-column">Autogen</td>
+                          <td>54.6±8.7</td>
+                          <td>73.7±7.7</td>
+                          <td><span class="red-x">✖</span></td>
+                          <td>54.6±8.7</td>
+                          <td>63.4±8.4</td>
+                          <td><span class="red-x">✖</span></td>
+                          <td>57.6±8.6</td>
+                          <td>76.0±7.4</td>
+                          <td><span class="red-x">✖</span></td>
+                      </tr>
+                      <tr>
+                          <td class="method-column">Imperative</td>
+                          <td class="method-column">ProgPrompt</td>
+                          <td>72.7±7.8</td>
+                          <td class="highlight">98.5±2.1</td>
+                          <td><span class="red-x">✖</span></td>
+                          <td>48.5±8.7</td>
+                          <td>61.1±8.5</td>
+                          <td><span class="red-x">✖</span></td>
+                          <td>48.5±8.2</td>
+                          <td>67.4±8.2</td>
+                          <td><span class="red-x">✖</span></td>
+                      </tr>
+                      <tr>
+                          <td rowspan="2" class="method-column">Declarative</td>
+                          <td class="method-column">CLMASP</td>
+                          <td class="highlight">97.0±3.0</td>
+                          <td>98.0±2.5</td>
+                          <td><span class="red-x">✖</span></td>
+                          <td>69.7±8.0</td>
+                          <td>78.8±7.1</td>
+                          <td><span class="red-x">✖</span></td>
+                          <td>54.6±8.7</td>
+                          <td>68.2±8.1</td>
+                          <td><span class="red-x">✖</span></td>
+                      </tr>
+                      <tr>
+                          <td class="method-column">NeSyC</td>
+                          <td>90.9±5.0</td>
+                          <td>96.0±3.4</td>
+                          <td><span class="green-check">✓</span></td>
+                          <td class="highlight">90.9±5.0</td>
+                          <td class="highlight">91.9±4.7</td>
+                          <td><span class="green-check">✓</span></td>
+                          <td class="highlight">84.9±6.2</td>
+                          <td class="highlight">89.9±5.3</td>
+                          <td><span class="green-check">✓</span></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
